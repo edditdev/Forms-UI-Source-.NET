@@ -32,7 +32,7 @@ Namespace My
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.mailrip.Client
+            Me.MainForm = Global.mailrip.MainForm
         End Sub
     End Class
 End Namespace

@@ -61,6 +61,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Wyszukuje zlokalizowany zasób typu System.IO.UnmanagedMemoryStream podobny do zasobu System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property _error() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("_error", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property app_bg() As System.Drawing.Bitmap
@@ -87,6 +96,15 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("icons8_password_32px_1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Wyszukuje zlokalizowany zasób typu System.IO.UnmanagedMemoryStream podobny do zasobu System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property typin() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("typin", resourceCulture)
             End Get
         End Property
     End Module

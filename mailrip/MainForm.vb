@@ -9,11 +9,12 @@
 Imports System.Net.Http
 Imports Guna.UI2.WinForms
 Imports mailrip.Server
-Public Class Client
+Imports System.Media
+Public Class MainForm
     Dim dll As String
     Private Sub Client_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim animateWindow As New Guna2AnimateWindow(Me)
-        animateWindow.AnimationType = animateWindow.AnimateWindowType.AW_SLIDE
+        animateWindow.AnimationType = Guna2AnimateWindow.AnimateWindowType.AW_SLIDE
         animateWindow.Interval = 400
         animateWindow.SetAnimateWindow(Me, True)
         MomPanel.Location = New Point(1, 1)
@@ -27,14 +28,22 @@ Public Class Client
         End If
     End Sub
 
-    Private Async Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
-        Try
-            Using client As New HttpClient(New HttpClientHandler With {.Credentials = New Net.NetworkCredential(DecodeBase64(server_login), DecodeBase64(server_password))})
-                dll = Await client.GetStringAsync("https://mailrip.fun/database/eddit/pass")
-                MsgBox(dll)
-            End Using
-        Catch ex As Exception
-            MsgBox("OOPA! " & ex.Message)
-        End Try
+    Private Async Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
+        AttmptLogin()
+    End Sub
+
+    Private Sub errorpage_closer_Tick(sender As Object, e As EventArgs) Handles errorpage_closer.Tick
+        Animator.Hide(errorpage)
+        errorpage_closer.Stop()
+    End Sub
+    Sub playwrongpass()
+        Dim player2 As New SoundPlayer(My.Resources._error)
+        player2.Play()
+    End Sub
+
+
+    Private Sub usernametxt_TextChanged(sender As Object, e As EventArgs) Handles usernametxt.TextChanged
+        Dim player1 As New SoundPlayer(My.Resources.typin)
+        player1.Play()
     End Sub
 End Class

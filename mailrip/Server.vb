@@ -1,8 +1,17 @@
 ﻿Imports System.Text
 
 Module Server
+
+    '# Server details
     Public server_login = "ZWRkaXQ="
     Public server_password = "QWxlTWx5bjEyMyFAIw=="
+
+    '# User input details
+    Public saved_username As String
+    Public saved_password As String
+
+
+
 
 
     '# Decodin function
