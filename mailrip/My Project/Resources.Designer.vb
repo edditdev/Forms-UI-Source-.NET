@@ -69,5 +69,25 @@ Namespace My.Resources
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icons8_male_user_32px() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icons8_male_user_32px", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icons8_password_32px_1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icons8_password_32px_1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
     End Module
 End Namespace
