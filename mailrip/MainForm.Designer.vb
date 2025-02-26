@@ -23,7 +23,7 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation3 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation1 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
@@ -37,6 +37,7 @@ Partial Class MainForm
         Me.login_status = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Bar = New Guna.UI2.WinForms.Guna2WinProgressIndicator()
         Me.LoginButton = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.rm_box = New Guna.UI2.WinForms.Guna2CustomCheckBox()
@@ -46,7 +47,6 @@ Partial Class MainForm
         Me.usernametxt = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Bar = New Guna.UI2.WinForms.Guna2WinProgressIndicator()
         Me.MomPanel.SuspendLayout()
         Me.errorpage.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
@@ -83,22 +83,22 @@ Partial Class MainForm
         '
         Me.Animator.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent
         Me.Animator.Cursor = Nothing
-        Animation3.AnimateOnlyDifferences = True
-        Animation3.BlindCoeff = CType(resources.GetObject("Animation3.BlindCoeff"), System.Drawing.PointF)
-        Animation3.LeafCoeff = 0!
-        Animation3.MaxTime = 1.0!
-        Animation3.MinTime = 0!
-        Animation3.MosaicCoeff = CType(resources.GetObject("Animation3.MosaicCoeff"), System.Drawing.PointF)
-        Animation3.MosaicShift = CType(resources.GetObject("Animation3.MosaicShift"), System.Drawing.PointF)
-        Animation3.MosaicSize = 0
-        Animation3.Padding = New System.Windows.Forms.Padding(0)
-        Animation3.RotateCoeff = 0!
-        Animation3.RotateLimit = 0!
-        Animation3.ScaleCoeff = CType(resources.GetObject("Animation3.ScaleCoeff"), System.Drawing.PointF)
-        Animation3.SlideCoeff = CType(resources.GetObject("Animation3.SlideCoeff"), System.Drawing.PointF)
-        Animation3.TimeCoeff = 0!
-        Animation3.TransparencyCoeff = 1.0!
-        Me.Animator.DefaultAnimation = Animation3
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 1.0!
+        Me.Animator.DefaultAnimation = Animation1
         '
         'errorpage_closer
         '
@@ -182,6 +182,19 @@ Partial Class MainForm
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
         Me.Guna2Panel1.Size = New System.Drawing.Size(235, 134)
         Me.Guna2Panel1.TabIndex = 6
+        '
+        'Bar
+        '
+        Me.Bar.AutoStart = True
+        Me.Bar.CircleSize = 0.3!
+        Me.Animator.SetDecoration(Me.Bar, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.Bar.Location = New System.Drawing.Point(156, 104)
+        Me.Bar.Name = "Bar"
+        Me.Bar.NumberOfCircles = 4
+        Me.Bar.ProgressColor = System.Drawing.Color.Crimson
+        Me.Bar.Size = New System.Drawing.Size(20, 20)
+        Me.Bar.TabIndex = 4
+        Me.Bar.Visible = False
         '
         'LoginButton
         '
@@ -363,19 +376,6 @@ Partial Class MainForm
         Me.Guna2HtmlLabel1.Text = "<b><font color='white' style='font-size:16px;'>mailrip</font></b><font color='cri" &
     "mson' style='font-size:16px;'>.fun</font>"
         '
-        'Bar
-        '
-        Me.Bar.AutoStart = True
-        Me.Bar.CircleSize = 0.3!
-        Me.Animator.SetDecoration(Me.Bar, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.Bar.Location = New System.Drawing.Point(156, 104)
-        Me.Bar.Name = "Bar"
-        Me.Bar.NumberOfCircles = 4
-        Me.Bar.ProgressColor = System.Drawing.Color.Crimson
-        Me.Bar.Size = New System.Drawing.Size(20, 20)
-        Me.Bar.TabIndex = 4
-        Me.Bar.Visible = False
-        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -386,8 +386,10 @@ Partial Class MainForm
         Me.Animator.SetDecoration(Me, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "MainForm"
+        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Client"
+        Me.TopMost = True
         Me.MomPanel.ResumeLayout(False)
         Me.MomPanel.PerformLayout()
         Me.errorpage.ResumeLayout(False)

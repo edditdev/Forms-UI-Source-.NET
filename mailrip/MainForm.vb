@@ -46,4 +46,9 @@ Public Class MainForm
         Dim player1 As New SoundPlayer(My.Resources.typin)
         player1.Play()
     End Sub
+
+    Private Sub passwordtxt_TextChanged(sender As Object, e As EventArgs) Handles passwordtxt.TextChanged
+        Dim player3 As New SoundPlayer(My.Resources.typin)
+        player3.Play()
+    End Sub
 End Class
