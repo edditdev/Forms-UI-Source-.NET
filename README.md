@@ -1,4 +1,4 @@
-Here’s an improved and expanded version of your README text:
+
 
 ---
 
