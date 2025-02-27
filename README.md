@@ -29,11 +29,7 @@ This template provides a powerful foundation for building .NET applications with
 Here’s a preview of the user interface design:
 
 ![UI Preview 1](https://i.imgur.com/6kXYvhy.png)  
-*Example of the dark UI layout.*
-
 ![UI Preview 2](https://i.imgur.com/roi5Jzn.png)  
-*Detailed view of the UI with Crimsonred components.*
-
 ![UI Preview 3](https://i.imgur.com/M5Pn0oy.png)  
 *UI with GUNA2 controls for smooth interaction and design.*
 
