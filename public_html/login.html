@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <!-- Title -->
+    <title>mailrip.fun - Lightning-Fast Email Bomber 2025</title>
+
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="mailrip.fun - Unleashing the ultimate email bomber experience. Lightning-fast delivery, customizable content, and relentless performance. Your emails, our expertise.">
+
+    <!-- Keywords for SEO -->
+    <meta name="keywords" content="email bomber, email spammer, bomber 2025, free email spam, spam email free, email flooder, mail spammer, spam tool, email blast, spam generator, email flodder, mail bomber free, spam software, fast email spam, email spam tool">
+
+    <!-- Author -->
+    <meta name="author" content="mailrip.fun">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (OG) Tags for Social Media -->
+    <meta property="og:title" content="mailrip.fun - Ultimate Email Bomber Experience">
+    <meta property="og:description" content="Lightning-fast email bomber with innovative features and unmatched power. Customize your spam, flood inboxes, and dominate with zero limits.">
+    <meta property="og:image" content="https://mailrip.fun/seo.png">
+    <meta property="og:url" content="https://mailrip.fun">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="mailrip.fun - Lightning-Fast Email Bomber 2025">
+    <meta name="twitter:description" content="Unleash the ultimate email spammer: fast, powerful, and limitless. Your emails, our expertise.">
+    <meta name="twitter:image" content="https://mailrip.fun/seo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('/bg.svg') repeat;
+            background-size: 100px 100px; 
+            animation: networkMove 6s linear infinite;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        @keyframes networkMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; } 
+        }
+
+        .main-container {
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .bom {
+            color: crimson;
+        }
+
+        .ber {
+            color: white;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px crimson; }
+            100% { text-shadow: 0 0 20px crimson; }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+
+        .toggle-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .toggle-buttons button {
+            flex: 1;
+            padding: 10px 0;
+            margin: 0 5px;
+            border: none;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-buttons button.active {
+            background: crimson;
+        }
+
+        .toggle-buttons button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Formularze */
+        .form-container {
+            transition: all 0.3s ease;
+        }
+
+        .form {
+            display: none;
+        }
+
+        .form.active {
+            display: block;
+        }
+
+        input {
+            width: 85%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background: crimson;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #ff4d4d;
+        }
+
+        #notification {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            display: none;
+            opacity: 0;
+            animation: fade-in 0.5s ease forwards;
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                width: 90%;
+            }
+            .logo {
+                font-size: 2rem;
+            }
+            .card {
+                padding: 15px;
+            }
+            .toggle-buttons {
+                flex-direction: column;
+            }
+            .toggle-buttons button {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="logo">
+            <span class="bom">MAILRIP</span><span class="ber">.FUN</span>
+        </div>
+
+        <div class="card">
+            <div class="toggle-buttons">
+                <button id="show-login" class="active">Login</button>
+                <button id="show-register">Register</button>
+            </div>
+
+            <div id="notification"></div>
+
+            <div class="form-container">
+                <form id="login-form" class="form active">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Log in</button>
+                </form>
+
+                <form id="register-form" class="form hidden">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="text" name="invite_code" placeholder="Invite-code" required>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>mailrip.fun 2025</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
